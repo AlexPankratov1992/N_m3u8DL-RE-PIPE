@@ -24,6 +24,7 @@ namespace N_m3u8DL_RE.CommandLine
         private static partial Regex ForStrRegex();
 
         private readonly static Argument<string> Input = new(name: "input", description: ResString.cmd_Input);
+        private readonly static Option<string?> Title = new(new string[] { "--title" }, description: ResString.cmd_title);
         private readonly static Option<string?> TmpDir = new(new string[] { "--tmp-dir" }, description: ResString.cmd_tmpDir);
         private readonly static Option<string?> SaveDir = new(new string[] { "--save-dir" }, description: ResString.cmd_saveDir);
         private readonly static Option<string?> SaveName = new(new string[] { "--save-name" }, description: ResString.cmd_saveName, parseArgument: ParseSaveName);

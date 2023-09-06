@@ -58,6 +58,7 @@ namespace N_m3u8DL_RE.Common.Resource
         public static string cmd_subFormat { get => GetText("cmd_subFormat"); }
         public static string cmd_subOnly { get => GetText("cmd_subOnly"); }
         public static string cmd_subtitleFix { get => GetText("cmd_subtitleFix"); }
+        public static string cmd_title { get => GetText("cmd_title"); }
         public static string cmd_threadCount { get => GetText("cmd_threadCount"); }
         public static string cmd_downloadRetryCount { get => GetText("cmd_downloadRetryCount"); }
         public static string cmd_tmpDir { get => GetText("cmd_tmpDir"); }

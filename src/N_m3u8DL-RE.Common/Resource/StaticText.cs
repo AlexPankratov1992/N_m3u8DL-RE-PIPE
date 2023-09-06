@@ -244,6 +244,12 @@ namespace N_m3u8DL_RE.Common.Resource
                 zhTW: "自動修正字幕",
                 enUS: "Automatically fix subtitles"
             ),
+            ["cmd_title"] = new TextContainer
+            (
+                zhCN: "设置下载过程的标题",
+                zhTW: "設置下載過程的標題",
+                enUS: "Set title for download process"
+            ),
             ["cmd_threadCount"] = new TextContainer
             (
                 zhCN: "设置下载线程数",
