@@ -70,6 +70,9 @@ namespace N_m3u8DL_RE
 
         static async Task DoWorkAsync(MyOption option)
         {
+            //print title
+            Logger.InfoMarkUp(option.AppTitle);
+
             //检测更新
             CheckUpdateAsync();
 

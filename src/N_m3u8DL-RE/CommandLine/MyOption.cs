@@ -13,6 +13,10 @@ namespace N_m3u8DL_RE.CommandLine
         /// </summary>
         public string Input { get; set; } = default!;
         /// <summary>
+        /// See: <see cref="CommandInvoker.AppTitle"/>.
+        /// </summary>
+        public string? AppTitle { get; set; }
+        /// <summary>
         /// See: <see cref="CommandInvoker.Headers"/>.
         /// </summary>
         public Dictionary<string, string> Headers { get; set; } = new Dictionary<string, string>();

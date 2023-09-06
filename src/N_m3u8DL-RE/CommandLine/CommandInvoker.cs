@@ -24,7 +24,7 @@ namespace N_m3u8DL_RE.CommandLine
         private static partial Regex ForStrRegex();
 
         private readonly static Argument<string> Input = new(name: "input", description: ResString.cmd_Input);
-        private readonly static Option<string?> Title = new(new string[] { "--title" }, description: ResString.cmd_title);
+        private readonly static Option<string?> AppTitle = new(new string[] { "--title" }, description: ResString.cmd_title);
         private readonly static Option<string?> TmpDir = new(new string[] { "--tmp-dir" }, description: ResString.cmd_tmpDir);
         private readonly static Option<string?> SaveDir = new(new string[] { "--save-dir" }, description: ResString.cmd_saveDir);
         private readonly static Option<string?> SaveName = new(new string[] { "--save-name" }, description: ResString.cmd_saveName, parseArgument: ParseSaveName);
@@ -378,6 +378,7 @@ namespace N_m3u8DL_RE.CommandLine
                 var option = new MyOption
                 {
                     Input = bindingContext.ParseResult.GetValueForArgument(Input),
+                    AppTitle = bindingContext.ParseResult.GetValueForOption(AppTitle),
                     LogLevel = bindingContext.ParseResult.GetValueForOption(LogLevel),
                     AutoSelect = bindingContext.ParseResult.GetValueForOption(AutoSelect),
                     SkipMerge = bindingContext.ParseResult.GetValueForOption(SkipMerge),
@@ -482,7 +483,7 @@ namespace N_m3u8DL_RE.CommandLine
 
             var rootCommand = new RootCommand(VERSION_INFO)
             {
-                Input, TmpDir, SaveDir, SaveName, BaseUrl, ThreadCount, DownloadRetryCount, AutoSelect, SkipMerge, SkipDownload, CheckSegmentsCount,
+                Input, AppTitle, TmpDir, SaveDir, SaveName, BaseUrl, ThreadCount, DownloadRetryCount, AutoSelect, SkipMerge, SkipDownload, CheckSegmentsCount,
                 BinaryMerge, DelAfterDone, NoDateInfo, WriteMetaJson, AppendUrlParams, ConcurrentDownload, Headers, /**SavePattern,**/ SubOnly, SubtitleFormat, AutoSubtitleFix,
                 FFmpegBinaryPath,
                 LogLevel, UILanguage, UrlProcessorArgs, Keys, KeyTextFile, DecryptionBinaryPath, UseShakaPackager, MP4RealTimeDecryption,
